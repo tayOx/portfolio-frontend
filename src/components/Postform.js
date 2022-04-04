@@ -6,7 +6,7 @@ import Axios from 'axios';
 
 function PostForm(){
 
-    const url = "https://proxyapp.correios.com.br/v1/sro-rastro/"
+    const url = "http://localhost:8080/api"
     const [data, setData] = useState({codigo: ""})
     const [result, setResult] = useState([])
 
@@ -17,7 +17,11 @@ function PostForm(){
             alert("Preencha ou insira um codigo valido")
         }else{
 
-            const response = await Axios.post(url,data.codigo)
+            const response = await Axios.post(url,{
+
+                codigo: data.codigo
+    
+            })
             const allResult = [...result, response.data[0]]
             setResult(allResult)
         }
