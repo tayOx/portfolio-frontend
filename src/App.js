@@ -1,7 +1,7 @@
 import Navbar from "./components/NavbarComp"
 import Home from './pages/home';
 import React from 'react';
-import AutoplayExample from "./components/slide"
+import "./components/api"
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
