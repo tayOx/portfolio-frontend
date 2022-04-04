@@ -17,11 +17,7 @@ function PostForm(){
             alert("Preencha ou insira um codigo valido")
         }else{
 
-            const response = await Axios.post(url,{
-
-                codigo: data.codigo
-    
-            })
+            const response = await Axios.post(url,data.codigo)
             const allResult = [...result, response.data[0]]
             setResult(allResult)
         }
