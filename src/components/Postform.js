@@ -6,7 +6,7 @@ import Axios from 'axios';
 
 function PostForm(){
 
-    const url = "https://tayo-portfolio-backend.herokuapp.com/trackerit/api"
+    const url = "http://localhost:3000/api"
     const [data, setData] = useState({codigo: ""})
     const [result, setResult] = useState([])
 
