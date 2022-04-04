@@ -6,7 +6,7 @@ import Axios from 'axios';
 
 function PostForm(){
 
-    const url = "http://localhost:8080/api"
+    const url = "https://tayo-portfolio-backend.herokuapp.com/api"
     const [data, setData] = useState({codigo: ""})
     const [result, setResult] = useState([])
 
