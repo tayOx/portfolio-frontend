@@ -3,6 +3,7 @@ import './postform.css'
 import eye from '../assets/img/lupa.png';
 import { Box, Stepper, Step, StepLabel } from '@mui/material';
 import Axios from 'axios';
+import api from "./api"
 
 function PostForm(){
 
@@ -16,7 +17,7 @@ function PostForm(){
         if(data.codigo == ""){
             alert("Preencha ou insira um codigo valido")
         }else{
-
+            api()
             const response = await Axios.post(url,{
 
                 codigo: data.codigo
