@@ -1,0 +1,208 @@
+.Post-form h1{
+    font-family: "ubuntu";
+    font-style: oblique;
+    color: white;
+    text-align: center;
+    padding-bottom: 1.5%;
+
+}
+
+.Stepper-text-date {
+
+    fill: white !important;
+    color: lightskyblue;
+    font-family: "ubuntu";
+    font-style: oblique;
+    word-wrap: break-word;
+    
+
+}
+
+.Stepper-text-time {
+
+    fill: white !important;
+    color: lightskyblue;
+    font-family: "ubuntu";
+    font-style: oblique;
+    word-wrap: break-word;
+    
+
+}
+
+.Stepper-text-status{
+
+    fill: white !important;
+    color: white;
+    font-family: "ubuntu";
+    word-wrap: break-word;
+    
+
+}
+
+.Stepper-css{
+    display: flex;
+    position: absolute;
+    text-align: center;
+    margin-top: 35%;
+    align-items: center;
+
+}
+
+.Post-form {
+    display: flex;
+    margin-top: 1%;
+    justify-content: center;
+    align-items: center;
+
+}
+.Post-form p {
+    text-align: center;
+    align-items: center;
+    top: 40%;
+    font-family: "Ubuntu", sans-serif;
+    font-style: oblique;
+    position: absolute;
+}
+.Resultado-box{ 
+
+    margin-top: 6%;
+    background-color: rgb(58, 57, 57);
+    border-radius: 15px;
+    box-shadow: 14px 15px 5px 1px rgba(0, 0, 0, 0.219);
+    
+}
+
+.Text-position{
+
+    padding-top: 1%;
+    padding-bottom: 1%;
+
+}
+
+.Resultado-text{
+    color: white;
+    text-indent: 1%;
+    font-family: "ubuntu";
+    font-size: medium;
+    padding: 0.17%;
+    white-space:pre-wrap;
+
+}
+
+#Resultado::after{
+
+    content: "\a";
+    white-space: pre;
+
+}
+.Post-Input{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 350px;
+    height: 40px;
+    border-radius: 40px;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    transform: translate(-50%, -30%);
+    background: #fff;
+    transition: all 0.3s ease;
+    text-align: center;
+  }
+
+
+
+.btn {
+    display: flex;
+    position: absolute;
+    margin: auto;
+    padding: 12px 18px;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+    align-items: center;
+    }
+       
+.btn:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 50px;
+    background: #54a7c0;
+    width: 45px;
+    height: 45px;
+    transition: all 0.3s ease;
+    
+    }
+       
+.btn span {
+    position: relative;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #ffffff;
+    font-style: oblique;
+    
+    }
+       
+.btn svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #ffffff;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+    
+    }
+       
+.btn:hover:before {
+    width: 100%;
+    background: #84a6b1;
+    }
+    
+    .btn:hover svg {
+    transform: translateX(0);
+    }
+    
+    .btn:active {
+    transform: scale(0.95);
+    }
+
+::-webkit-input-placeholder {
+    text-align: center;
+    font-size: 100%;
+    text-transform: uppercase;
+}
+    :-moz-placeholder { /* Firefox 18- */
+    text-align: center;  
+    
+    }
+    
+    ::-moz-placeholder {  /* Firefox 19+ */
+    text-align: center;  
+    }
+    
+    :-ms-input-placeholder {  
+    text-align: center; 
+    }
+
+.Form-logo {
+    animation: Form-logo-spin infinite 20s linear;
+    height: 80px;
+    display: flex;
+    margin-left: 40%;
+    margin-bottom: 2%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    }
+@keyframes Form-logo-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+    }
