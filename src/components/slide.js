@@ -15,7 +15,7 @@ function Slide(){
         <img src={tayo5} className="sliderimg"/>
         <img src={tayobg} className="sliderimg"/>
         <img src={tayo3} className="sliderimg"/>
-        {/* <img src={tayo4} className="sliderimg"/> */}
+        <img src={tayo4} className="sliderimg"/>
     </AliceCarousel>
 
   );
