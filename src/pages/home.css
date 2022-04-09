@@ -19,10 +19,48 @@ body {
   box-shadow: 14px 15px 5px 1px rgba(0, 0, 0, 0.356);
   width: 20%;
   height: 300px;
-  object-fit: cover
+  object-fit: cover;
+  
+  
 }
 
+.sliderprojects{
 
+  width: 90%;
+  border-radius: 15px;
+  padding-left: 10%;
+  padding-top: 5%;
+  
+}
+
+.container {
+  
+  border-radius: 15px;
+  box-shadow: 14px 15px 5px 1px rgba(0, 0, 0, 0.356);
+  background:rgba(46, 45, 45, 0.568);
+  
+}
+
+.Projects {
+
+  padding-top: 1%;
+  padding-bottom: 5%;
+}
+
+.Projects h1{
+
+  color: white;
+  text-align: center;
+  font-family: "ubuntu";
+
+}
+.Projects p{
+
+  color: white;
+  text-align: center;
+  font-family: "ubuntu";
+
+}
 
 .App-logo {
 
@@ -104,8 +142,6 @@ to{border-right-color: transparent;}
   text-align: left;
   direction: ltr;
   padding: 5%;
-  /* d */
-
 
 }
 
@@ -130,5 +166,11 @@ to{border-right-color: transparent;}
   direction: rtl;
   padding: 5%;
 
+}
+
+.Projects-img {
+
+  width: auto;
+  height : 300px;
 
 }

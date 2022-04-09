@@ -2,6 +2,7 @@ import React from 'react';
 import logo from '../assets/img/lupa.png';
 import './home.css';
 import Slide from "../components/slide"
+import SlideProjects from "../components/slideProjects"
 import Code from "../components/code"
 
 
@@ -42,8 +43,9 @@ function Home() {
         </div>
         </div>
           <Slide />
+          <SlideProjects />
       </div>
-
+      
       
     );
 
