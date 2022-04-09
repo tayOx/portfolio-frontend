@@ -87,6 +87,7 @@ to{border-right-color: transparent;}
 .Prism-code code, pre{
 
   width: 30%;
+  max-width: 100%;
   border-radius: 15px;
   box-shadow: 14px 15px 5px 1px rgba(0, 0, 0, 0.356);
   overflow: auto;
@@ -98,9 +99,12 @@ to{border-right-color: transparent;}
 .Prism {
 
   position: absolute;
-  padding-left: 5%;
-  top: 35%;
   width: 100%;
+  max-width: 100%;
+  text-align: left;
+  direction: ltr;
+  padding: 5%;
+  /* d */
 
 
 }
@@ -109,6 +113,7 @@ to{border-right-color: transparent;}
 
 
   width: 30%;
+  max-width: 100%;
   border-radius: 15px;
   box-shadow: 14px 15px 5px 1px rgba(0, 0, 0, 0.356);
   overflow: auto;
@@ -119,9 +124,11 @@ to{border-right-color: transparent;}
 
 .Prism2 {
 
+  width: 100%;
+  max-width: 100%;
   text-align: left;
   direction: rtl;
   padding: 5%;
-  top: 35%;
+
 
 }

@@ -3,7 +3,7 @@ import './postform.css'
 import eye from '../assets/img/lupa.png';
 import { Box, Stepper, Step, StepLabel } from '@mui/material';
 import Axios from 'axios';
-import api from "./api"
+
 
 function PostForm(){
 
