@@ -5,7 +5,7 @@ import { Box, Stepper, Step, StepLabel } from '@mui/material';
 import Axios from 'axios';
 
 
-function PostForm(){
+function GetIp(){
 
     const url = "https://tayo-portfolio-backend.herokuapp.com/ip"
     const [data, setData] = useState({ip: ""})
@@ -73,4 +73,4 @@ function PostForm(){
         </div>
       );
 }
-export default PostForm;
+export default GetIp;
