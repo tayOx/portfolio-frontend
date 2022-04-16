@@ -1,50 +1,10 @@
 .Post-form h1{
+    padding: 5px;
     font-family: "ubuntu";
     font-style: oblique;
     color: white;
     text-align: center;
     padding-bottom: 1.5%;
-
-}
-
-.Stepper-text-date {
-
-    fill: white !important;
-    color: lightskyblue;
-    font-family: "ubuntu";
-    font-style: oblique;
-    word-wrap: break-word;
-    
-
-}
-
-.Stepper-text-time {
-
-    fill: white !important;
-    color: lightskyblue;
-    font-family: "ubuntu";
-    font-style: oblique;
-    word-wrap: break-word;
-    
-
-}
-
-.Stepper-text-status{
-
-    fill: white !important;
-    color: white;
-    font-family: "ubuntu";
-    word-wrap: break-word;
-    
-
-}
-
-.Stepper-css{
-    display: flex;
-    position: absolute;
-    text-align: center;
-    margin-top: 35%;
-    align-items: center;
 
 }
 
@@ -63,38 +23,8 @@
     font-style: oblique;
     position: absolute;
 }
-.Resultado-box{ 
 
-    margin-top: 6%;
-    background-color: rgb(58, 57, 57);
-    border-radius: 15px;
-    box-shadow: 14px 15px 5px 1px rgba(0, 0, 0, 0.219);
-    
-}
 
-.Text-position{
-
-    padding-top: 1%;
-    padding-bottom: 1%;
-
-}
-
-.Resultado-text{
-    color: white;
-    text-indent: 1%;
-    font-family: "ubuntu";
-    font-size: medium;
-    padding: 0.17%;
-    white-space:pre-wrap;
-
-}
-
-#Resultado::after{
-
-    content: "\a";
-    white-space: pre;
-
-}
 .Post-Input{
     position: relative;
     top: 50%;
@@ -148,7 +78,7 @@
     }
        
 .btn svg {
-
+    position: relative;
     top: 0;
     margin-left: 10px;
     fill: none;
@@ -191,10 +121,11 @@
     :-ms-input-placeholder {  
     text-align: center; 
     }
+    
 
-.Cor {
-    animation: Cor-anim infinite 2.2s alternate;
-    height: 80px;
+.Ipmg{
+    animation: Ip-anim infinite 0.6s alternate;
+    height: 70px;
     display: flex;
     margin-left: 40%;
     margin-bottom: 2%;
@@ -202,7 +133,23 @@
     justify-content: center;
     align-items: center;
     }
-@keyframes Cor-anim{
-    from { transform: translate(-50%); }
-    to { transform: translate(50%); }
+@keyframes Ip-anim{
+    from { transform: translateY(0%); }
+    to { transform: translateY(15%) }
     }
+
+
+.result {
+    position:fixed;
+    max-width: 100%;
+    width: 100%;
+    top: 50%;
+    left: 35%;
+}
+.Code{
+
+    width: 100%;
+    max-width: 100%;
+
+}
+    

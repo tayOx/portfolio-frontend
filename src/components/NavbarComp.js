@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
 import TrackerIt from '../pages/TrackerIt';
-import MyIp from '../pages/myip';
+import IpInfo from '../pages/ipinfo';
 import Home from "../pages/home"
 
 import { Nav, Navbar, Container, NavDropdown } from 'react-bootstrap'
@@ -23,7 +23,7 @@ export default class NavbarComnp extends Component {
           >
             <Nav.Link as={Link} to="/">Home</Nav.Link>
             <Nav.Link as={Link} to="/trackerit">Tracker It</Nav.Link>
-            <Nav.Link as={Link} to="/myip">My IP</Nav.Link>
+            <Nav.Link as={Link} to="/ipinfo">IP Infos</Nav.Link>
             <NavDropdown title="Contact" id="navbarScrollingDropdown">
               <NavDropdown.Item href="https://www.linkedin.com/in/yuri-t-73a6bb21a/">LinkEdin</NavDropdown.Item>
               <NavDropdown.Item href="https://github.com/tayOx">Github</NavDropdown.Item>
@@ -42,7 +42,7 @@ export default class NavbarComnp extends Component {
       <Routes>
         <Route path='/' element={<Home/>} />
         <Route path='/trackerit' element={<TrackerIt />} />
-        <Route path='/myip' element={<MyIp />} />
+        <Route path='/ipinfo' element={<IpInfo />} />
       </Routes>
     </Router>
     

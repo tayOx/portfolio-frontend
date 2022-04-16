@@ -9,7 +9,7 @@ function SlideProjects(){
   return (
     <div className="Projects">
       <h1>TrackerIt</h1>
-      <p>TrackerIt its an web application to tracker your correios's order</p>
+      <p>TrackerIt its a web application to tracker your correios's order</p>
     <div className="container">
     <AliceCarousel autoPlay autoPlayInterval="1500">
         <img src={Trackerimg} className="sliderprojects"/>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './postform.css'
-import eye from '../assets/img/lupa.png';
+import cor from '../assets/img/correios.png';
 import { Box, Stepper, Step, StepLabel } from '@mui/material';
 import Axios from 'axios';
 
@@ -33,23 +33,19 @@ function PostForm(){
         const newData ={...data}
         newData[e.target.id] = e.target.value
         setData(newData)
-        console.log(newData)
 
     }
-    
-    console.log("antes do return (result normal)",result)
     const steps = result;
-    console.log("antes do return (steps)",steps)
-
+    
     return (
         <div className='Post-form'>
             <form onSubmit={(e) => getResult(e)}>
-                <img src={eye} className="Form-logo" alt="logo" />
+                <img src={cor} className="Cor" />
                 <h1>Tracker It</h1>
-                <input onChange={(e) => handle(e)} id="codigo" value={data.codigo} placeholder='codigo de rastreio' className='Post-Input' type="text"></input>
+                <input onChange={(e) => handle(e)} id="codigo" value={data.codigo} placeholder='Tracking code' className='Post-Input' type="text"></input>
                 <br></br>
                 <button class="btn">
-                <span>Buscar</span>
+                <span>Search</span>
                 <svg viewBox="0 0 13 10" height="10px" width="15px">
                     <path d="M1,5 L11,5"></path>
                     <polyline points="8 1 12 5 8 9"></polyline>

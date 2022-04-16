@@ -36,7 +36,7 @@ body {
 .container {
   
   border-radius: 15px;
-  box-shadow: 14px 15px 5px 1px rgba(0, 0, 0, 0.356);
+  box-shadow: 15px 15px 5px 1px rgba(0, 0, 0, 0.356);
   background:rgba(46, 45, 45, 0.568);
   
 }
@@ -45,6 +45,8 @@ body {
 
   padding-top: 1%;
   padding-bottom: 5%;
+  border-radius: 20px;
+  
 }
 
 .Projects h1{
@@ -172,5 +174,6 @@ to{border-right-color: transparent;}
 
   width: auto;
   height : 300px;
+  border-radius: 20px;
 
 }

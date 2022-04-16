@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import './postform.css'
-import eye from '../assets/img/lupa.png';
-import { Box, Stepper, Step, StepLabel } from '@mui/material';
+import './Getip.css'
+import ipimg from '../assets/img/ip.png';
+import Code from "./code"
 import Axios from 'axios';
 
 
-function GetIp(){
+function MyIp(){
 
-    const url = "https://tayo-portfolio-backend.herokuapp.com/ip"
+    const url = "http://localhost:8080/ip"
     const [data, setData] = useState({ip: ""})
     const [result, setResult] = useState([])
 
@@ -23,7 +23,7 @@ function GetIp(){
                 ip: data.ip
     
             })
-            const allResult = [...result, response.data[0]]
+            const allResult = [...result, response.data]
             setResult(allResult)
         }
     }
@@ -33,23 +33,21 @@ function GetIp(){
         const newData ={...data}
         newData[e.target.id] = e.target.value
         setData(newData)
-        console.log(newData)
 
     }
-    
-    console.log("antes do return (result normal)",result)
-    const steps = result;
-    console.log("antes do return (steps)",steps)
+
+
 
     return (
+        <div>
         <div className='Post-form'>
             <form onSubmit={(e) => getResult(e)}>
-                <img src={eye} className="Form-logo" alt="logo" />
-                <h1>Tracker It</h1>
-                <input onChange={(e) => handle(e)} id="ip" value={data.ip} placeholder='codigo de rastreio' className='Post-Input' type="text"></input>
+                <img src={ipimg} className="Ipmg" />
+                <h1>Get Infos</h1>
+                <input onChange={(e) => handle(e)} id="ip" value={data.ip} placeholder='127.0.0.1' className='Post-Input' type="text"></input>
                 <br></br>
                 <button class="btn">
-                <span>Buscar</span>
+                <span>Search</span>
                 <svg viewBox="0 0 13 10" height="10px" width="15px">
                     <path d="M1,5 L11,5"></path>
                     <polyline points="8 1 12 5 8 9"></polyline>
@@ -57,20 +55,32 @@ function GetIp(){
                 </button>
 
             </form>
-            <div className='Stepper-css'>
-                    <Box sx={{ width: '100%' }}>
-                    <Stepper activeStep={1} alternativeLabel>
-                        {steps.length >=1 ? steps[0].map((label, idx) => {
-                        return (<Step completed={true} key={idx}>
-                            <StepLabel><span className='Stepper-text-date'>{label.query}</span> </StepLabel>
-                        </Step>
-                        )})
-                        :""
-                    }
-                    </Stepper>
-                    </Box>
+        </div>
+        
+        <div className='result'>
+                {result.length >=1 ? result.map((label, idx) => {
+        
+        const code = `var Result = {
+        status:` +label.status+`,
+        continent:` +label.continent+`,
+        country:` +label.country+`,
+        region:` +label.region+`,
+        city:` +label.city+`,
+        org:` +label.org+`,
+        proxy:` +label.proxy+`,
+        ip:` +label.query+`,
+        };`;
+                return (
+        
+                <div className='prism'>
+                    <Code key={idx} code={code} language="js" />
                 </div>
+        
+                )})
+                :""
+                }
+        </div>
         </div>
       );
 }
-export default GetIp;
+export default MyIp;
