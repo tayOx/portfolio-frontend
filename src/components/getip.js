@@ -7,20 +7,20 @@ import Axios from 'axios';
 
 function PostForm(){
 
-    const url = "https://tayo-portfolio-backend.herokuapp.com/correios"
-    const [data, setData] = useState({codigo: ""})
+    const url = "https://tayo-portfolio-backend.herokuapp.com/ip"
+    const [data, setData] = useState({ip: ""})
     const [result, setResult] = useState([])
 
     const getResult = async (e) => {
 
         e.preventDefault()
-        if(data.codigo == ""){
-            alert("Preencha ou insira um codigo valido")
+        if(data.ip == ""){
+            alert("Preencha ou insira um ip valido")
         }else{
 
             const response = await Axios.post(url,{
 
-                codigo: data.codigo
+                ip: data.ip
     
             })
             const allResult = [...result, response.data[0]]
@@ -46,7 +46,7 @@ function PostForm(){
             <form onSubmit={(e) => getResult(e)}>
                 <img src={eye} className="Form-logo" alt="logo" />
                 <h1>Tracker It</h1>
-                <input onChange={(e) => handle(e)} id="codigo" value={data.codigo} placeholder='codigo de rastreio' className='Post-Input' type="text"></input>
+                <input onChange={(e) => handle(e)} id="ip" value={data.ip} placeholder='codigo de rastreio' className='Post-Input' type="text"></input>
                 <br></br>
                 <button class="btn">
                 <span>Buscar</span>
@@ -62,10 +62,7 @@ function PostForm(){
                     <Stepper activeStep={1} alternativeLabel>
                         {steps.length >=1 ? steps[0].map((label, idx) => {
                         return (<Step completed={true} key={idx}>
-                            <StepLabel><span className='Stepper-text-date'>{label.data}</span> </StepLabel>
-                            <span className='Stepper-text-status'>{label.status}</span>
-                            <br></br>
-                            <span className='Stepper-text-time'>{label.hora}</span>
+                            <StepLabel><span className='Stepper-text-date'>{label.query}</span> </StepLabel>
                         </Step>
                         )})
                         :""
