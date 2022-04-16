@@ -123,8 +123,9 @@
     }
     
 
-.Ipmg{
-    animation: Ip-anim infinite 0.6s alternate;
+.QRimg{
+
+    animation: Qr-anim infinite 0.6s alternate;
     height: 70px;
     display: flex;
     margin-left: 40%;
@@ -133,17 +134,17 @@
     justify-content: center;
     align-items: center;
     }
-@keyframes Ip-anim{
+@keyframes Qr-anim{
     from { transform: translateY(0%); }
     to { transform: translateY(15%) }
     }
 
 
-.result {
+.result-qr {
     position:fixed;
     max-width: 100%;
     width: 100%;
-    top: 48%;
+    top: 55%;
     left: 35%;
 }
 .Code{
@@ -153,3 +154,12 @@
 
 }
     
+.QrImg {
+
+    position: fixed;
+    left: 45%;
+    top: 70%;
+    width: 150px;
+    box-shadow: 15px 15px 5px 1px rgba(0, 0, 0, 0.356);
+
+}

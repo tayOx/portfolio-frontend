@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './postform.css'
 import cor from '../assets/img/correios.png';
+import { Button } from "react-bootstrap"
 import { Box, Stepper, Step, StepLabel } from '@mui/material';
 import Axios from 'axios';
 
@@ -44,14 +45,13 @@ function PostForm(){
                 <h1>Tracker It</h1>
                 <input onChange={(e) => handle(e)} id="codigo" value={data.codigo} placeholder='Tracking code' className='Post-Input' type="text"></input>
                 <br></br>
-                <button class="btn">
+                <button class="search">
                 <span>Search</span>
                 <svg viewBox="0 0 13 10" height="10px" width="15px">
                     <path d="M1,5 L11,5"></path>
                     <polyline points="8 1 12 5 8 9"></polyline>
                 </svg>
                 </button>
-
             </form>
             <div className='Stepper-css'>
                     <Box sx={{ width: '100%' }}>

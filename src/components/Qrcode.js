@@ -1,26 +1,29 @@
 import React, { useState } from 'react';
-import './Getip.css'
-import ipimg from '../assets/img/ip.png';
+import './Qrcode.css'
+import qrimg from '../assets/img/qrsvg.png';
 import Code from "./code"
 import Axios from 'axios';
 
 
-function MyIp(){
 
-    const url = "https://tayo-portfolio-backend.herokuapp.com/ip"
-    const [data, setData] = useState({ip: ""})
+function QrCodeGen(){
+
+    const url = "http://localhost:8080/genqr"
+    const [data, setData ] = useState({type: ""})
+    const [data2, setData2 ] = useState({value: ""})
     const [result, setResult] = useState([])
 
     const getResult = async (e) => {
 
         e.preventDefault()
-        if(data.ip == ""){
+        if(data.type && data2.value == ""){
             alert("Preencha ou insira um ip valido")
         }else{
 
             const response = await Axios.post(url,{
 
-                ip: data.ip
+                type: data.type,
+                value: data2.value
     
             })
             const allResult = [...result, response.data]
@@ -34,6 +37,10 @@ function MyIp(){
         newData[e.target.id] = e.target.value
         setData(newData)
 
+        const newData2 = {...data2}
+        newData2[e.target.id] = e.target.value
+        setData2(newData2)
+
     }
 
 
@@ -42,9 +49,11 @@ function MyIp(){
         <div>
         <div className='Post-form'>
             <form onSubmit={(e) => getResult(e)}>
-                <img src={ipimg} className="Ipmg" />
-                <h1>Get Infos</h1>
-                <input onChange={(e) => handle(e)} id="ip" value={data.ip} placeholder='127.0.0.1' className='Post-Input' type="text"></input>
+                <img src={qrimg} className="Ipmg" />
+                <h1>Generator</h1>
+                <input onChange={(e) => handle(e)} id="type" value={data.type} placeholder='text, emailto, smsto, url, telno' className='Post-Input' type="text"></input>
+                <br></br>
+                <input onChange={(e) => handle(e)} id="value" value={data2.value} placeholder='mensagem, email, numero ou url' className='Post-Input' type="text"></input>
                 <br></br>
                 <button class="btn">
                 <span>Search</span>
@@ -57,26 +66,18 @@ function MyIp(){
             </form>
         </div>
         
-        <div className='result'>
+        <div className='result-qr'>
                 {result.length >=1 ? result.map((label, idx) => {
         
-        const code = `var Result = {
-        status:` +label.status+`,
-        continent:` +label.continent+`,
-        country:` +label.country+`,
-        region:` +label.region+`,
-        city:` +label.city+`,
-        org:` +label.org+`,
-        ReverseDNS:` +label.reverse+`,
-        proxy:` +label.proxy+`,
-        ip:` +label.query+`,
-        };`;
+        const code = `var status =`+" "+label.Message;
+
                 return (
-        
+                <div>
                 <div className='prism'>
                     <Code key={idx} code={code} language="js" />
                 </div>
-        
+                <img src={label.url} className="QrImg"></img>
+                </div>
                 )})
                 :""
                 }
@@ -84,4 +85,4 @@ function MyIp(){
         </div>
       );
 }
-export default MyIp;
+export default QrCodeGen;

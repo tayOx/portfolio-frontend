@@ -111,7 +111,7 @@
 
 
 
-.btn {
+.search {
     display: flex;
     position: absolute;
     margin: auto;
@@ -122,7 +122,7 @@
     align-items: center;
     }
        
-.btn:before {
+.search:before {
     content: "";
     position: absolute;
     top: 0;
@@ -136,7 +136,7 @@
     
     }
        
-.btn span {
+.search span {
     position: relative;
     font-family: "Ubuntu", sans-serif;
     font-size: 18px;
@@ -147,7 +147,7 @@
     
     }
        
-.btn svg {
+.search svg {
 
     top: 0;
     margin-left: 10px;
@@ -161,16 +161,16 @@
     
     }
        
-.btn:hover:before {
+.search:hover:before {
     width: 100%;
     background: #84a6b1;
     }
     
-    .btn:hover svg {
+    .search:hover svg {
     transform: translateX(0);
     }
     
-    .btn:active {
+    .search:active {
     transform: scale(0.95);
     }
 
@@ -206,3 +206,4 @@
     from { transform: translate(-50%); }
     to { transform: translate(50%); }
     }
+
