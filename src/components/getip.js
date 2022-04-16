@@ -7,7 +7,7 @@ import Axios from 'axios';
 
 function MyIp(){
 
-    const url = "http://localhost:8080/ip"
+    const url = "https://tayo-portfolio-backend.herokuapp.com/ip"
     const [data, setData] = useState({ip: ""})
     const [result, setResult] = useState([])
 
