@@ -163,3 +163,19 @@
     box-shadow: 15px 15px 5px 1px rgba(0, 0, 0, 0.356);
 
 }
+
+.how {
+
+    font-family: "ubuntu";
+    font-style: oblique;    
+    display: flex;
+    color: white;
+    
+    margin: auto;
+    padding: 2%;
+    border:none;
+    background: none;
+    align-items: center;
+
+
+    }

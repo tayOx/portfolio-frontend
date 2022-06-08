@@ -56,7 +56,6 @@ function MyIp(){
 
             </form>
         </div>
-        
         <div className='result'>
                 {result.length >=1 ? result.map((label, idx) => {
         

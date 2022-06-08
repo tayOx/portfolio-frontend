@@ -6,6 +6,9 @@ const TrackerIt = () => {
   return (
     <div>
       <PostForm />
+      <form method="get" action="/howto/trackerit">
+        <button type="submit" class="how">How to?</button>
+      </form>
     </div>
   );
 };

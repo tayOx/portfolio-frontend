@@ -51,7 +51,7 @@ function QrCodeGen(){
             <form onSubmit={(e) => getResult(e)}>
                 <img src={qrimg} className="Ipmg" />
                 <h1>Generator</h1>
-                <input onChange={(e) => handle(e)} id="type" value={data.type} placeholder='text, emailto, smsto, url, telno' className='Post-Input' type="text"></input>
+                <input onChange={(e) => handle(e)} id="type" value={data.type} placeholder='text, mailto, smsto, url, telno' className='Post-Input' type="text"></input>
                 <br></br>
                 <input onChange={(e) => handle(e)} id="value" value={data2.value} placeholder='mensagem, email, numero ou url' className='Post-Input' type="text"></input>
                 <br></br>
@@ -62,10 +62,8 @@ function QrCodeGen(){
                     <polyline points="8 1 12 5 8 9"></polyline>
                 </svg>
                 </button>
-
             </form>
         </div>
-        
         <div className='result-qr'>
                 {result.length >=1 ? result.map((label, idx) => {
         

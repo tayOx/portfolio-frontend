@@ -5,6 +5,9 @@ const QrCode = () => {
   return (
     <div>
       <GenQr />
+      <form method="get" action="/howto/qr">
+            <button type="submit" class="how">How to?</button>
+        </form>
     </div>
   );
 };
