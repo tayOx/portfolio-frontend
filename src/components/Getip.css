@@ -140,16 +140,26 @@
 
 
 .result {
-    position:fixed;
-    max-width: 100%;
-    width: 100%;
-    top: 48%;
-    left: 35%;
-}
-.Code{
 
+    /* background-color: red; */
+
+    max-width: 500px;
     width: 100%;
-    max-width: 100%;
+    height: auto;
+    padding-top: 5%;
+    margin: 0 auto;
 
 }
+
+@media screen and (max-width: 500px) {
+
+
+    .result{
+  
+        padding-top: 15%;
+        width: 400px;
+        margin: 0 auto;
+  
+    }
     
+  }

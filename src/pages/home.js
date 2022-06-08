@@ -34,12 +34,15 @@ function Home() {
           <img src={logo} className="App-logo" alt="logo" />
           </div>
           <h2 className='line-1 anim-typewriter'> Yuri <code className='tayo'>"tayO"</code> Tamayose's Portfolio() </h2>
-          <Slide />
-
-        <div className='Prism'>
-          <Code className="Prism-code" code={code} language="js" />
-        </div>
-        
+          <div className='response'>
+            <Slide />
+          </div>
+          <div className='PrismRoot'>
+            <div className='Prism'>
+              <Code className="Prism-code" code={code} language="js" />
+            </div>
+          </div>
+    
         <SlideProjects />
         </div>
       </div>

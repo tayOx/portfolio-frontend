@@ -12,20 +12,37 @@ body {
 
 .sliderimg{
 
-  margin-top: 5%;
-  margin-left: 44%;
+
   border-radius: 15px;
   box-shadow: 14px 15px 5px 1px rgba(0, 0, 0, 0.356);
-  object-fit: cover;
-  max-width: 175px;
+  width: 100%;
+  height: auto;
+  max-width: 200px;
+  margin: 0 auto;
+
 }
 
-@media only screen and (max-width: 1000px) {
-  .sliderimg {
-    width: 100%;
+.response {
+
+  width: 100%;
+  height: auto;
+  max-width: 200px;
+  padding-top: 3.5%;
+  margin: 0 auto;
+
+}
+
+@media screen and (max-width: 500px) {
+
+
+  .response{
+
+    padding-top: 12%;
 
   }
+  
 }
+
 
 .sliderprojects{
 
@@ -99,6 +116,17 @@ body {
   transform: translateY(-50%);    
 }
 
+@media screen and (max-width: 1000px) {
+
+  .line-1{
+
+    font-size: 4vw;
+
+  }
+  
+}
+
+
 /* Animation */
 .anim-typewriter{
 animation: typewriter 4s steps(44) 1s 1 normal both,
@@ -129,23 +157,34 @@ to{border-right-color: transparent;}
 
 .Prism-code code, pre{
 
-
   width: 100%;
   max-width: 100%;
   border-radius: 15px;
   box-shadow: 14px 15px 5px 1px rgba(0, 0, 0, 0.356);
   font-family: Consolas, Monaco, 'Andale Mono', 'Lucida Console', monospace;
 
-
-
 }
 
 .Prism {
 
   margin-top: 5%;
-  margin-left: 25%;
+  margin: 0 auto;
   width: 50%;
   margin-bottom: 5%;
+
+
+}
+
+@media screen and (max-width: 500px) {
+
+
+  .Prism{
+
+    width: 85%;
+    padding-bottom: 10%;
+    margin: 0 auto;
+  }
+  
 }
 
 

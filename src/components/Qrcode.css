@@ -141,25 +141,30 @@
 
 
 .result-qr {
-    position:fixed;
-    max-width: 100%;
-    width: 100%;
-    top: 55%;
-    left: 35%;
-}
-.Code{
 
+    margin: 0 auto;
+    max-width: 300px;
     width: 100%;
-    max-width: 100%;
+    height: auto;
+    padding-top: 4%;
+
+}
+
+@media screen and (max-width:600px) {
+    
+    .result-qr{
+
+        padding-top: 10%;
+
+    }
 
 }
     
 .QrImg {
 
-    position: fixed;
-    left: 45%;
-    top: 70%;
-    width: 150px;
+    padding-top: 5%;
+    margin-left: 20%;
+    width: 170px;
     box-shadow: 15px 15px 5px 1px rgba(0, 0, 0, 0.356);
 
 }

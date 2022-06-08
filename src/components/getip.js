@@ -40,6 +40,7 @@ function MyIp(){
 
     return (
         <div>
+
         <div className='Post-form'>
             <form onSubmit={(e) => getResult(e)}>
                 <img src={ipimg} className="Ipmg" />
@@ -56,30 +57,30 @@ function MyIp(){
 
             </form>
         </div>
-        <div className='result'>
-                {result.length >=1 ? result.map((label, idx) => {
-        
-        const code = `var Result = {
-        status:` +label.status+`,
-        continent:` +label.continent+`,
-        country:` +label.country+`,
-        region:` +label.region+`,
-        city:` +label.city+`,
-        org:` +label.org+`,
-        ReverseDNS:` +label.reverse+`,
-        proxy:` +label.proxy+`,
-        ip:` +label.query+`,
-        };`;
-                return (
-        
-                <div className='prism'>
-                    <Code key={idx} code={code} language="js" />
-                </div>
-        
-                )})
-                :""
-                }
-        </div>
+            <div className='result'>
+                    {result.length >=1 ? result.map((label, idx) => {
+            
+            const code = `var Result = {
+            status:` +label.status+`,
+            continent:` +label.continent+`,
+            country:` +label.country+`,
+            region:` +label.region+`,
+            city:` +label.city+`,
+            org:` +label.org+`,
+            ReverseDNS:` +label.reverse+`,
+            proxy:` +label.proxy+`,
+            ip:` +label.query+`,
+            };`;
+                    return (
+            
+                    <div className='prism'>
+                        <Code key={idx} code={code} language="js" />
+                    </div>
+            
+                    )})
+                    :""
+                    }
+            </div>
         </div>
       );
 }

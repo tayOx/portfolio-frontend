@@ -16,8 +16,8 @@ function QrCodeGen(){
     const getResult = async (e) => {
 
         e.preventDefault()
-        if(data.type && data2.value == ""){
-            alert("Preencha ou insira um ip valido")
+        if(data.type == "" || data2.value == "" ){
+            alert("Preencha corretamente!")
         }else{
 
             const response = await Axios.post(url,{

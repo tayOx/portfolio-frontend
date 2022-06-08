@@ -14,12 +14,12 @@
     font-family: "ubuntu";
     font-style: oblique;
     word-wrap: break-word;
-    
+    margin: 0 auto;
 
 }
 
 .Stepper-text-time {
-
+    
     fill: white !important;
     color: lightskyblue;
     font-family: "ubuntu";
@@ -35,24 +35,41 @@
     color: white;
     font-family: "ubuntu";
     word-wrap: break-word;
+    margin: 0 auto;
     
 
 }
 
 .Stepper-css{
-    display: flex;
-    position: absolute;
-    text-align: center;
-    margin-top: 35%;
-    align-items: center;
+
+    margin: 0 auto;
+    margin-top: 5%;
+    
+    width: 100%;
+    height: auto;
+    max-width: 1200px;
+
+}
+
+@media screen and (max-width: 500px) {
+    
+    .Stepper-css{
+
+        padding-top: 10%;
+        width: 100%;
+        height: auto;
+
+    }
 
 }
 
 .Post-form {
-    display: flex;
+    
     margin-top: 1%;
-    justify-content: center;
-    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    max-width: 0px;
 
 }
 .Post-form p {
@@ -63,38 +80,7 @@
     font-style: oblique;
     position: absolute;
 }
-.Resultado-box{ 
 
-    margin-top: 6%;
-    background-color: rgb(58, 57, 57);
-    border-radius: 15px;
-    box-shadow: 14px 15px 5px 1px rgba(0, 0, 0, 0.219);
-    
-}
-
-.Text-position{
-
-    padding-top: 1%;
-    padding-bottom: 1%;
-
-}
-
-.Resultado-text{
-    color: white;
-    text-indent: 1%;
-    font-family: "ubuntu";
-    font-size: medium;
-    padding: 0.17%;
-    white-space:pre-wrap;
-
-}
-
-#Resultado::after{
-
-    content: "\a";
-    white-space: pre;
-
-}
 .Post-Input{
     position: relative;
     top: 50%;

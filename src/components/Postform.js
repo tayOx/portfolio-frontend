@@ -39,6 +39,7 @@ function PostForm(){
     const steps = result;
     
     return (
+        <div>
         <div className='Post-form'>
             <form onSubmit={(e) => getResult(e)}>
                 <img src={cor} className="Cor" />
@@ -53,6 +54,7 @@ function PostForm(){
                 </svg>
                 </button>
             </form>
+        </div>
             <div className='Stepper-css'>
                     <Box sx={{ width: '100%' }}>
                     <Stepper activeStep={1} alternativeLabel>
