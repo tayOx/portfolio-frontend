@@ -8,7 +8,7 @@ import Axios from 'axios';
 
 function QrCodeGen(){
 
-    const url = "https://tayo-portfolio-backend.herokuapp.com/gen-qr"
+    const url = "https://tayo-portfolio-backend.herokuapp.com/genqr"
     const [data, setData ] = useState({type: ""})
     const [data2, setData2 ] = useState({value: ""})
     const [result, setResult] = useState([])
