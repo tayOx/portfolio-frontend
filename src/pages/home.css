@@ -1,8 +1,5 @@
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  background: #282a36;  /* fallback for old browsers */
+
   background: -webkit-linear-gradient(to left, #282a36, #282a36);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to left, #282a36, #282a36); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
@@ -14,14 +11,20 @@ body {
 
 
 .sliderimg{
-  margin-left: 40%;
+
+  margin-top: 5%;
+  margin-left: 44%;
   border-radius: 15px;
   box-shadow: 14px 15px 5px 1px rgba(0, 0, 0, 0.356);
-  width: 20%;
-  height: 300px;
   object-fit: cover;
-  
-  
+  max-width: 175px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .sliderimg {
+    width: 100%;
+
+  }
 }
 
 .sliderprojects{
@@ -89,7 +92,7 @@ body {
   width: 24em;
   margin: 0 auto;
   border-right: 2px solid rgba(255,255,255,.75);
-  font-size: 150%;
+  font-size: 2vw;
   text-align: center;
   white-space: nowrap;
   overflow: hidden;
@@ -126,49 +129,25 @@ to{border-right-color: transparent;}
 
 .Prism-code code, pre{
 
-  width: 30%;
+
+  width: 100%;
   max-width: 100%;
   border-radius: 15px;
   box-shadow: 14px 15px 5px 1px rgba(0, 0, 0, 0.356);
-  overflow: auto;
   font-family: Consolas, Monaco, 'Andale Mono', 'Lucida Console', monospace;
-	hyphens: none;
+
+
 
 }
 
 .Prism {
 
-  position: absolute;
-  width: 100%;
-  max-width: 100%;
-  text-align: left;
-  direction: ltr;
-  padding: 5%;
-
+  margin-top: 5%;
+  margin-left: 25%;
+  width: 50%;
+  margin-bottom: 5%;
 }
 
-.Prism-code2 code, pre{
-
-
-  width: 30%;
-  max-width: 100%;
-  border-radius: 15px;
-  box-shadow: 14px 15px 5px 1px rgba(0, 0, 0, 0.356);
-  overflow: auto;
-  font-family: Consolas, Monaco, 'Andale Mono', 'Lucida Console', monospace;
-	hyphens: none;
-
-}
-
-.Prism2 {
-
-  width: 100%;
-  max-width: 100%;
-  text-align: left;
-  direction: rtl;
-  padding: 5%;
-
-}
 
 .Projects-img {
 

@@ -17,15 +17,14 @@ function Home() {
         "Python", "React.js,"
       CertifiedCourses: "DB - Etec"
     };
-    `;
-    const code2 = `var Associated = {
+    var Associated = {
       Company: "HardDisk",
       Url: "www.harddisk.com.br",
       Func: "Moderator", "Developer",
       Discord: 
       "https://discord.gg/m4yGDu5e"
-    };
     `;
+
 
     return (
         
@@ -35,15 +34,14 @@ function Home() {
           <img src={logo} className="App-logo" alt="logo" />
           </div>
           <h2 className='line-1 anim-typewriter'> Yuri <code className='tayo'>"tayO"</code> Tamayose's Portfolio() </h2>
+          <Slide />
+
         <div className='Prism'>
           <Code className="Prism-code" code={code} language="js" />
         </div>
-        <div className='Prism2'>
-          <Code className="Prism-code2" code={code2} language="js" />
+        
+        <SlideProjects />
         </div>
-        </div>
-          <Slide />
-          <SlideProjects />
       </div>
       
       
